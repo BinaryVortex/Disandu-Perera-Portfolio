@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disandu Perera - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="smooth-scroll relative bg-gray-900 text-white">
+    <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900 p-4 fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl">Disandu Perera</h1>
+            <ul class="flex space-x-4 md:space-x-6">
+                <li><a href="#home" class="hover:text-gray-400 px-2 md:px-3">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-400 px-2 md:px-3">About</a></li>
+                <li><a href="#skills" class="hover:text-gray-400 px-2 md:px-3">Skills</a></li>
+                <li><a href="#projects" class="hover:text-gray-400 px-2 md:px-3">Projects</a></li>
+                <li><a href="#contact" class="hover:text-gray-400 px-2 md:px-3">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center text-center pt-20 overflow-hidden">
+        <div class="relative z-10 hero-content">
+            <img src="images/443c1e89-ddc6-4223-b6e1-fe17c45aead3.jpg" alt="Naveen Anuja" class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto border-4 border-white hero-image">
+            <h1 class="text-4xl md:text-6xl font-bold mb-2 hero-name">Disandu Perera</h1>
+            <div class="hero-desc">
+                <p class="text-xl md:text-2xl mb-4">Full Stack Developer & UI/UX Designer</p>
+                <p class="mb-6 text-lg md:text-xl">Driven to build scalable, user-centric solutions with a positive impact</p>
+            </div>
+            <div class="space-x-4">
+                <a href="cv/Disandu Perera (11) (1) (3).pdf" download="Disandu_Perera_CV.pdf">
+                    <button class="bg-gray-700 px-4 py-2 rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">Download CV</button>
+                </a>
+                <button class="bg-gray-700 px-4 py-2 rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500"><a href="#contact">Contact Me</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 container mx-auto px-4 text-center relative z-10">
+        <canvas id="about-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none"></canvas>
+        <div class="about-content">
+            <h2 class="text-3xl font-bold mb-10 animate-fade-in">About Me</h2>
+            <p class="text-lg max-w-3xl mx-auto mb-6 text-left">I am a passionate Python enthusiast, full-stack developer, and UI/UX designer focused on building scalable, user-centric applications. While I enjoy working across the full stack, I am particularly drawn to backend development, where I design efficient architectures and solve complex challenges. Balancing education and professional work has strengthened my adaptability and time management. With a strong foundation in software development and UX design, I deliver high-quality, maintainable solutions that drive business success. As a happy spreader, I thrive on fostering positivity, collaboration, and growth, always eager to share knowledge, mentor, and contribute to impactful projects. Let’s connect and create something meaningful together!</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl font-bold text-center mb-10 animate-fade-in">Skills & Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skill Cards -->
+            <div class="skill-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <h3 class="text-xl mb-4">Frontend Development</h3>
+                <div class="skill-item"><span>HTML/CSS</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 98%;"><span class="progress-text">98%</span></div></div></div>
+                <div class="skill-item"><span>JavaScript</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 94%;"><span class="progress-text">94%</span></div></div></div>
+                <div class="skill-item"><span>NextJS</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 86%;"><span class="progress-text">86%</span></div></div></div>
+                <div class="skill-item"><span>ReactJS</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 75%;"><span class="progress-text">75%</span></div></div></div>
+                <div class="skill-item"><span>Bootstrap</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 97%;"><span class="progress-text">97%</span></div></div></div>
+                <div class="skill-item"><span>Tailwind</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 82%;"><span class="progress-text">82%</span></div></div></div>
+            </div>
+
+            <div class="skill-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <h3 class="text-xl mb-4">Backend Development</h3>
+                <div class="skill-item"><span>Python</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 95%;"><span class="progress-text">95%</span></div></div></div>
+                <div class="skill-item"><span>MySQL</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 92%;"><span class="progress-text">92%</span></div></div></div>
+                <div class="skill-item"><span>NestJs</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 80%;"><span class="progress-text">80%</span></div></div></div>
+                <div class="skill-item"><span>NodeJS</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 70%;"><span class="progress-text">70%</span></div></div></div>
+                <div class="skill-item"><span>ExpressJS</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 85%;"><span class="progress-text">85%</span></div></div></div>
+                <div class="skill-item"><span>MongoDB</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 55%;"><span class="progress-text">55%</span></div></div></div>
+            </div>
+
+            <div class="skill-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <h3 class="text-xl mb-4">Tools & Technologies</h3>
+                <div class="skill-item"><span>VS Code</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 100%;"><span class="progress-text">100%</span></div></div></div>
+                <div class="skill-item"><span>IntelliJ</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 90%;"><span class="progress-text">90%</span></div></div></div>
+                <div class="skill-item"><span>GitHub/GitLab</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 92%;"><span class="progress-text">92%</span></div></div></div>
+                <div class="skill-item"><span>DBeaver</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 76%;"><span class="progress-text">76%</span></div></div></div>
+                <div class="skill-item"><span>Figma</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 90%;"><span class="progress-text">90%</span></div></div></div>
+                <div class="skill-item"><span>Postman</span><div class="progress-bar"><div class="progress-fill bg-blue-500" style="width: 88%;"><span class="progress-text">88%</span></div></div></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl font-bold text-center mb-10 animate-fade-in">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project Cards -->
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/print.png" alt="WEBGL THREE.JS React-Three-Fiber 3D Galaxy" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">WEBGL THREE.JS React-Three-Fiber 3D Galaxy</h3>
+                <p>"Cosmic Realms: Explore the Infinite Depths of a 3D Galaxy"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">React-Three-Fiber, WebGL, and custom GLSL shaders</p>
+                <a href="https://sugaith.github.io/react-three-fiber-shader-galaxy/"><button class="bg-gray-700 px-4 py-2 rounded-full mt-9 py-2 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Crypto.jpg" alt="Crypto App" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Crypto App</h3>
+                <p>"CryptoPulse: Live Prices, Market Trends & Real-Time Insights for 34 Cryptocurrencies."</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS , NodeJS , CoinGecko API</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Weather.jpg" alt="Weather App" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Weather App</h3>
+                <p>Track the winds, rain, and everything in between with my Windy Weather App!</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS, NodeJS , OpenWeather API</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-9 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Hangman.jpg" alt="Hangman Game" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Hangman Game</h3>
+                <p>"Hangman Challenge: Test Your Words, Outsmart the Noose, and Conquer the Game!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS , NodeJS , Tailwind CSS</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-9 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/calculator.jpg" alt="Calculator" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Calculator</h3>
+                <p>"SmartCalc: Your Ultimate Tool for Fast, Accurate, and Hassle-Free Calculations!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS, NodeJS</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Currency.jpg" alt="Currency Converter" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Currency Converter</h3>
+                <p>"ForexFlow: Real-Time Currency Conversion Made Simple, Fast, and Accurate!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS, NodeJS, Tailwind CSS, Vite</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Task.jpg" alt="To-Do-App" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">To-Do-App</h3>
+                <p>"TaskMaster: Your Ultimate To-Do App – Organize, Prioritize, and Achieve Your Goals!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS , NodeJS , Tailwind CSS</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/tesla.jpg" alt="Tesla Clone" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Tesla Clone</h3>
+                <p>"Tesla: Experience the Power, Innovation, and Style of a Tesla – Reimagined!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">ReactJS</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Nexus.jpg" alt="Nexus-X" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Nexus-X</h3>
+                <p>"Nexus-X: Explore My Universe of 200 Projects – Innovation, Creativity, and Tech Excellence in One Portfolio!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">HTML, CSS And JavaScript</p>
+                <a href="https://binaryvortex.github.io/Nexus-X-Loader/"><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Screenshot 2025-03-14 150340.png" alt="Portfolio Website" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Portfolio Website</h3>
+                <p>""Disandu Perera: A Journey Through Innovation, Creativity, and Tech – Explore My Portfolio of Excellence!""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">HTML, CSS And JavaScript Along With 3JS</p>
+                <a href="https://binaryvortex.github.io/Nexus-X-Loader/"><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Music Player.jpg" alt="Music Player" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">MOODBEATS</h3>
+                <p>"MOODBEATS: Let Your Emotions Create the Soundtrack – AI-Driven Music Tailored to Your Mood!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">React-Native , Fastapi And MongoDB</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Flyera.jpg" alt="Flyera" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Flyera</h3>
+                <p>""Flyera: Connect, Share, and Thrive – Your Platform for Skills, Services, and Success!"</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Figma</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Boss.jpg" alt="Boss Butterfly Graphic Design" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Boss Butterfly Graphic Design</h3>
+                <p>""Designs That Inspire, Transform, and Elevate.""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Adobe Photoshop</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Donut.jpg" alt="Dunkin Donuts Graphic Design" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Dunkin Donuts Graphic Design</h3>
+                <p>""Where Creativity Takes Flight.""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Adobe Illustrator</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Wedding.jpg" alt="Wedding Album Design" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Wedding Album Design</h3>
+                <p>""Bringing Beauty and Boldness to Every Design.""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Adobe Illustrator</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Screenshot 2024-07-08 201140.png" alt="Coffee Shop Website" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Coffee Shop Website</h3>
+                <p>"""Brewing Perfection, One Cup at a Time – Freshly Roasted, Expertly Crafted, Always Satisfying.""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">HTML, CSS And JavaScript</p>
+                <a href="https://binaryvortex.github.io/Coffee-Website/"><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Restrurant.png" alt="GRILLI Restrurant Website" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">GRILLI Restrurant Website</h3>
+                <p>""""Where Flavor Meets Passion – Discover the Taste of Perfection."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">HTML, CSS And JavaScript</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/solar.png" alt="Solar System Website" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Solar System Website</h3>
+                <p>""""Explore the Cosmos – Discover the Wonders of Our Solar System."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">HTML, CSS And JavaScript</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Login.jpg" alt="Login Form" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Login Form</h3>
+                <p>""""Unlock a world of elegance—where seamless access meets stunning design."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">HTML, CSS And JavaScript</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Billing.jpg" alt="Billing Software" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Billing Software</h3>
+                <p>""""Effortless Billing, Seamless Management."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Python , Tknitter</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Dictionary.jpg" alt="Dictionary" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Dictionary</h3>
+                <p>""""Discover the Meaning, Master the Language."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Python , Tknitter</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Rocket.png" alt="Space Invaders Game" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Space Invaders Game</h3>
+                <p>""""Explore the Cosmos – Discover the Wonders of Our Solar System."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Python , Pygame</p>
+                <a href="https://github.com/BinaryVortex/Space-Game-PY"><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Penguins.png" alt="Penguin's Palmers Dataset EDA" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Penguin's Palmers Dataset EDA</h3>
+                <p>""""Penguins & Palmers: Exploring Patterns, Uncovering Insights. A Deep Dive into EDA."""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Python, Google Collab</p>
+                <a href="https://github.com/BinaryVortex/Machine-Learning-Notes/blob/main/Untitled5.ipynb"><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+
+            <div class="project-card relative p-6 bg-gray-800 rounded-lg card-item">
+                <img src="images/Voice.png" alt="Emotion Detection ML Model Using Voice" class="w-full h-48 object-cover">
+                <h3 class="text-xl mb-2">Emotion Detection ML Model Using Voice</h3>
+                <p>"""Listening Beyond Words – Detecting Emotions Through Voice Intelligence.""</p>
+                <p class="text-[1.1rem] text-gray-400 font-bold mt-2">Python, Google Collab</p>
+                <a href=""><button class="bg-gray-700 px-4 py-2 rounded-full mt-4 hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500">View Project</button></a>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 container mx-auto px-4 text-center relative z-10">
+        <h2 class="text-3xl font-bold mb-10 contact-item">Get in Touch</h2>
+        <div class="flex justify-center mb-6 contact-item">
+            <a href="https://www.linkedin.com/in/disandu-perera-8bb931264/" class="mx-6"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/BinaryVortex" class="mx-6"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61551857484792" class="mx-6"><i class="fab fa-facebook"></i></a>
+            <a href="" class="mx-6"><i class="fab fa-instagram"></i></a>
+        </div>
+        <form class="max-w-lg mx-auto mt-4 contact-form">
+            <input type="text" id="nameInput" placeholder="Name" class="w-full p-3 mb-4 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-item">
+            <input type="email" id="emailInput" placeholder="Email" class="w-full p-3 mb-4 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-item">
+            <input type="text" id="subjectInput" placeholder="Subject" class="w-full p-3 mb-4 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 contact-item">
+            <textarea placeholder="Message" id="massageInput" class="w-full p-3 mb-4 bg-gray-700 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 contact-item"></textarea>
+            <button type="submit" class="bg-gray-700 px-6 py-3 rounded-full hover:bg-gradient-to-l hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 contact-item" onclick="sendMail()">Send</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+    <script src="email.js"></script>
+</body>
+</html>
